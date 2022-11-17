@@ -14,11 +14,12 @@ private:
     vector<Meal> menu;
 public:
     System();
+    void enterSys();
     void fillInfo(string name,string contact);
     void removeMeal();
     void showMenu(Menu* m);
     void placeOrder();
-    void reseveTable();
+    void bookTable();
     void payBill();
 
 };
