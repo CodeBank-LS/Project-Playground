@@ -23,7 +23,7 @@ void input(){
     for(int i = 0; i < 9; i ++){
         for(int j = 0; j < 9; j ++){
             cin >> t;
-            P[i][j] = t - '0';
+            P[i][j] = t - '0';//convert char to int
         }
     }
 }
@@ -45,31 +45,24 @@ void output(){
 
 //fill in value in row n and column m and check the grid
 bool checkGrid(int row, int column, int number){
-    //row check
     for(int i = 0; i < 9; i ++){
-        if(P[i][row/9] == number){
-            cout<<"same value in the row"<<endl;
-            return false;
+        if(P[row][i] == number){
+            cout<<"row check fail"<<endl;
+            return false;}
+        if(P[i][column] == number){
+            cout<<"column check failed" << endl;
+            return false;}
+    }
+    int x = row/3*3;
+    int y = column/3*3;
+    for(int i = x; i < x+3; i ++){
+        for(int j = y; j < y+3; j ++){
+            if(P[i][j] == number){
+                cout<<"grid check failed" << endl;
+                return false;}
         }
     }
-    //column check
-    for(int i = 0; i < 9; i ++){
-        if(P[column/9][i] == number){
-            cout<<"same value in the column"<<endl;
-            return false;
-        }
-    }
-    //grid check
-    int x = row / 9 / 3 * 3;
-    int y = column % 9 / 3 * 3;
-    for(int i = 0; i < 3; i ++){
-        for(int j = 0; j < 3; j ++){
-            if(P[x+i][y+j] == number){
-                cout<<"same value in the square"<<endl;
-                return false;
-            }
-        }
-    }
+    return true;
 }
 
 //check every grid, row check, column check and square check
