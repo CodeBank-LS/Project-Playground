@@ -19,4 +19,4 @@ add_executable(OOD
         "restaurant order system/System.h"
         "restaurant order system/Table.cpp"
         "restaurant order system/Table.h"
-        order.cpp)
+        )
