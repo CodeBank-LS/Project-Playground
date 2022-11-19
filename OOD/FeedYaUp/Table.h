@@ -1,4 +1,4 @@
-//
+//Table number and table status
 //
 
 #ifndef MENU_TABLE_H

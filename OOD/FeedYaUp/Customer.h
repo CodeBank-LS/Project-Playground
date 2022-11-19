@@ -1,8 +1,6 @@
 //
-// customer name
-//customer contact
-//table reserved
-//order number
+// prompt to enter name and contact to construct a customer
+// class customer include class order
 //
 
 #ifndef MENU_CUSTOMER_H

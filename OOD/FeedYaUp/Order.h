@@ -1,4 +1,6 @@
-//
+//Class order include class meal
+//order can add/remove meal from vector
+//order should include table
 
 #ifndef MENU_ORDER_H
 #define MENU_ORDER_H

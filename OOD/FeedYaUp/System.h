@@ -1,3 +1,5 @@
+//system is like resturant, it can have tables to book and menu to show
+//
 #ifndef SYSTEM_H
 #define SYSTEM_H
 #include <string>

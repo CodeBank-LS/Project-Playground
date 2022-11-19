@@ -1,3 +1,9 @@
+//keep having errors like use of undeclared/unknown type
+//problem is solved to declare the class in right order: table<order<customer
+//something can be refined in the future: admin class to manage the system
+//a customer should be able to book more than 1 table and multiple orders
+//the add meal and remove meal can be done in one enter like A1(add meal 1) or R2(remove meal 2)
+//some input restrictions can be added to avoid bullshit input
 #include"Customer.h"
 #include"Meal.h"
 #include"Order.h"

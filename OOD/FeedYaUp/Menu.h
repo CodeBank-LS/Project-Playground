@@ -1,4 +1,5 @@
-
+//Menu is just for add/remove meal
+//show to custmer to choose meal
 #ifndef MENU_H
 #define MENU_H
 #include"Meal.h"
