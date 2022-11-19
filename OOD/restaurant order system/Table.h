@@ -1,9 +1,4 @@
 //
-// table number
-//bool available/not
-//start time
-//finish time
-//time session over 2h will set table table to available
 //
 
 #ifndef MENU_TABLE_H
@@ -18,19 +13,18 @@
 using namespace std;
 class Table{
 private:
-    int tableNumber;
+    int tableID;
     int numOfPlp;
-    bool TableAvaliable;
-    vector<Order> tableOrder;
+    bool available;
+    int table_orderNumber;
 public:
     Table();
-    Table(int order_number);
-    void set_numOfplp(int n);
-    void set_tableOrdeer();
-    Order* get_tableOrder();
-    void checkTablestatus();
-
-   
+    Table(int table_id);
+    int get_tableID();
+    void setPeople(int n);
+    bool get_available();
+    bool set_booked();
+    bool clear_table();
     ~Table();
 };
 

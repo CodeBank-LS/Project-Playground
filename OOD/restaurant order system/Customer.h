@@ -19,14 +19,16 @@ class Customer{
 private:
     string customerName;
     string customerContact;
-    int tableReserved;
     int orderNumber;
 public:
     Customer();
+    Customer(string cName, string cContact);
     void set_customerName(string customerName);
+    string get_customerName();
     void set_customerContact(string customerContact);
-    void chooseTable(Table* table);
-    void set_TableReserved();
+    string get_customerContact();
+    int checkOrder();
+    ~Customer();
 
 
 

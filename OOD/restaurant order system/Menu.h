@@ -1,24 +1,22 @@
 
 #ifndef MENU_H
 #define MENU_H
+#include"Meal.h"
 #include <string>
 #include<iostream>
-#include<stdio.h>
 #include<vector>
-#include"Meal.h"
+
 using namespace std;
 class Menu{
 private:
-    string menuType;
-    vector<Meal*> LunchMenu;
-    vector<Meal*> DineMenu;
+    vector<Meal*> meals;
 public:
-    Menu(string menutype);
+    Menu();
     void addMeal(Meal* ml);
     void removeMeal(Meal* ml);
-    void printMenu(vector<Meal*> menu);
-    ~Menu()
+    void printMenu();
+    ~Menu();
 
-}
+};
 
 #endif //MENU_H

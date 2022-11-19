@@ -11,16 +11,19 @@
 using namespace std;
 class System{
 private:
-    vector<Meal> menu;
+    vector<Table*> tables;
 public:
     System();
-    void enterSys();
-    void fillInfo(string name,string contact);
-    void removeMeal();
+
+    void addMeal(Menu* menu, Meal* meal);
+    void addTable(Table* table);
+
+    void removeMeal(Menu* menu, Meal* meal);
     void showMenu(Menu* m);
-    void placeOrder();
-    void bookTable();
-    void payBill();
+    void showTables();
+
+    Order* placeOrder();
+    ~System();
 
 };
 

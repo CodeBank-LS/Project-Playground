@@ -1,21 +1,30 @@
 #include"Menu.h"
 
-Menu::Menu(string menutype){
-    this->menuType=menutype;
+Menu::Menu(){
+    meals={{}};
 }
 
 void Menu::addMeal(Meal* ml){
-    int answer;
-    cout<<"Which menu do you want to add meal in?"<<endl;
-    cout<<"1. Lunch Menu"<<"        "<<"2. Dinner Menu"<<endl;
-    cin>>answer;
-    if(answer==1){
-        Menu1.push_back(ml);
+    meals.push_back(ml);
+}
 
-    }else if(answer==2){
-        Menu2.push_back(ml);
-    }else{
-        cout<<"Choose the menu to add or quit";
+void Menu::removeMeal(Meal* ml){
+    for(int i=0;i<meals.size();i++){
+        if(meals[i]==ml){
+            meals.erase(meals.begin()+i);
+        }
     }
+}
 
+void Menu::printMenu(){
+    cout<<"Menu:"<<endl;
+    for(int i=0;i<meals.size();i++){
+        cout<<meals[i]->get_ID()<<"."<<meals[i]->get_Name()<<" "<<meals[i]->get_Price()<<endl;
+    }
+}
+
+Menu::~Menu(){
+    for(int i=0;i<meals.size();i++){
+        delete meals[i];
+    }
 }
