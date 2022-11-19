@@ -47,7 +47,7 @@ void output(){
 bool checkGrid(int row, int column, int number){
     //row check
     for(int i = 0; i < 9; i ++){
-        if(P[row/9][i] == number){
+        if(P[i][row/9] == number){
             cout<<"same value in the row"<<endl;
             return false;
         }
