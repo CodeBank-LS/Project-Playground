@@ -26,9 +26,9 @@
 //     "name":"Lin Su",
 //     "profession":"student"
 // }
-function addnumbers(pra1,pra2){
-    const total=Number(pra1)+Number(pra2);
-    return total;
+const num=1234;
+if(num===1234){
+    const greeting ="hello 1234";
+    console.log(greeting)
 }
 
-const result=addnumbers("1","9");
