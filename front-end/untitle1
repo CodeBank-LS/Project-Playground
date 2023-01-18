@@ -1,0 +1,16 @@
+{
+    'name':'Lin Su',
+    'favorite food':'Pizza',
+    'age':'32',
+    'friends':
+    {
+        'name':'zhaomin',
+        'age':'33',
+    },
+    {
+        'name':'yingzhi',
+        'age':'40'
+
+    }
+
+}
