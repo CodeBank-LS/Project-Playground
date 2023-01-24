@@ -93,3 +93,7 @@ fetch(`http://swapi.dev/api/people/${randNum}`)
         birthyear.innerHTML=charactor['birth_year']
     })
 })
+
+$(document).ready(function(){
+    console.log("jQuery is loaded")
+})
