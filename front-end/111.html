@@ -27,8 +27,9 @@
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.3/dist/jquery.min.js"></script>
     <script>
         $(document).ready(function(){
-            $("h1").text("changed via jQuery");
-            $("p").html("<strong> This is bolded and replaced</strong>");
+            $("h1, p").text("changed via jQuery#1");
+            $("p.custom-class").text("changed again #2");
+            $("#customId").text("changed again #3")
         })
         
         
