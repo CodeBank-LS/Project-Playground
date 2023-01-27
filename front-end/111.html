@@ -21,7 +21,9 @@
         orem ipsum dolor sit amet consectetur adipisicing elit. Harum quas voluptas, dolorum voluptatem optio quo qui consequatur ratione explicabo perferendis nostrum architecto modi reprehenderit, sed blanditiis labore ut molestiae. Dignissimos?
 
     </p>
-    <section>Put some html code in here</section>
+    <section>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Asperiores soluta reprehenderit totam ipsa pariatur obcaecati officiis perferendis nostrum blanditiis tenetur laboriosam eveniet unde, enim animi aperiam est in, ut quisquam?</section>
+
+    <input type="text" value="Hello world">
 
 
 
@@ -31,7 +33,10 @@
             
             $("#customId").html("<h1>Hello<span class='custom-class'></span></h1>");
             $("span").text("This is span");
-            $("section").html("<h1> VS </h1>");
+            
+            const value=$("input").val("changed");
+            const text=$("section").text();
+            console.log(text)
         })
         
         
