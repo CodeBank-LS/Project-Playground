@@ -11,23 +11,17 @@
         The title
     </h1>
     <h1> The title 2</h1>
-    <button class=""custom-class>This is button</button>
-  
-    <div id="parent">
-        <strong>bolded word here</strong>
-        <em>italicized word here</em>
-        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Obcaecati labore minus quam fuga voluptates iste in iusto voluptate a fugit et ipsum dignissimos soluta maiores doloribus, id dolorum impedit. Odio.
-
-        </p>
-    </div>
+    <div id="putAbutton"></div>
+   <button>Click me</button>
+   <input type="text">
 
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.3/dist/jquery.min.js"></script>
     <script>
         $(document).ready(function(){
-            const $parent=$("div#parent")
-            $parent.empty()
-            //fetch info 3 seconds
-            $parent.html()
+        $(document).on("mouseover","button",function(){
+            console.log("over")
+        })
+           
         })
         
         
