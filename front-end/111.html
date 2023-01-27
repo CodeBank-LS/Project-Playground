@@ -25,6 +25,9 @@
 
     <input type="text" value="Hello world">
     <h2>Some text here</h2>
+    <div id="target">
+        add html before and after this
+    </div>
 
 
 
@@ -41,6 +44,10 @@
             $("h2")
                 .append("<strong><u> This is bold</u></strong>")
                 .prepend("<i>This is italics </i>");
+            
+                $("div#target")
+                    .before("<h3>Hello this is a title</h3>")
+                    .after("<h3>This is a paragrah</h3>");
         })
         
         
