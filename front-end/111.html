@@ -24,6 +24,7 @@
     <section>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Asperiores soluta reprehenderit totam ipsa pariatur obcaecati officiis perferendis nostrum blanditiis tenetur laboriosam eveniet unde, enim animi aperiam est in, ut quisquam?</section>
 
     <input type="text" value="Hello world">
+    <h2>Some text here</h2>
 
 
 
@@ -37,6 +38,9 @@
             const value=$("input").val("changed");
             const text=$("section").text();
             console.log(text)
+            $("h2")
+                .append("<strong><u> This is bold</u></strong>")
+                .prepend("<i>This is italics </i>");
         })
         
         
