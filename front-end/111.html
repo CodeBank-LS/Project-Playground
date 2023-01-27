@@ -21,15 +21,17 @@
         orem ipsum dolor sit amet consectetur adipisicing elit. Harum quas voluptas, dolorum voluptatem optio quo qui consequatur ratione explicabo perferendis nostrum architecto modi reprehenderit, sed blanditiis labore ut molestiae. Dignissimos?
 
     </p>
+    <section>Put some html code in here</section>
 
 
 
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.3/dist/jquery.min.js"></script>
     <script>
         $(document).ready(function(){
-            $("h1, p").text("changed via jQuery#1");
-            $("p.custom-class").text("changed again #2");
-            $("#customId").text("changed again #3")
+            
+            $("#customId").html("<h1>Hello<span class='custom-class'></span></h1>");
+            $("span").text("This is span");
+            $("section").html("<h1> VS </h1>");
         })
         
         
