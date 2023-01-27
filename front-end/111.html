@@ -12,42 +12,19 @@
     </h1>
     <h1> The title 2</h1>
     <button class=""custom-class>This is button</button>
-    <p class=""custom-class>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Non perferendis sunt ex cum eos adipisci dolorum, quo sequi saepe quos fuga corrupti. Reprehenderit possimus numquam eveniet iusto maxime, facilis explicabo.
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic dicta pariatur magni consequuntur debitis, voluptate fugiat ea tempora quas quo dolore minima unde cum voluptas, beatae asperiores est ullam molestias.
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro earum facilis commodi. Placeat inventore impedit sed itaque ipsum, dignissimos fuga at quas dolor? Voluptatem soluta iure pariatur debitis, ab vero.
+  
+    <div id="parent">
+        <strong>bolded word here</strong>
+        <em>italicized word here</em>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Obcaecati labore minus quam fuga voluptates iste in iusto voluptate a fugit et ipsum dignissimos soluta maiores doloribus, id dolorum impedit. Odio.
 
-    </p>
-    <p id="customId">L
-        orem ipsum dolor sit amet consectetur adipisicing elit. Harum quas voluptas, dolorum voluptatem optio quo qui consequatur ratione explicabo perferendis nostrum architecto modi reprehenderit, sed blanditiis labore ut molestiae. Dignissimos?
-
-    </p>
-    <section>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Asperiores soluta reprehenderit totam ipsa pariatur obcaecati officiis perferendis nostrum blanditiis tenetur laboriosam eveniet unde, enim animi aperiam est in, ut quisquam?</section>
-
-    <input type="text" value="Hello world">
-    <h2>Some text here</h2>
-    <div id="target">
-        add html before and after this
+        </p>
     </div>
-
-
 
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.3/dist/jquery.min.js"></script>
     <script>
         $(document).ready(function(){
-            
-            $("#customId").html("<h1>Hello<span class='custom-class'></span></h1>");
-            $("span").text("This is span");
-            
-            const value=$("input").val("changed");
-            const text=$("section").text();
-            console.log(text)
-            $("h2")
-                .append("<strong><u> This is bold</u></strong>")
-                .prepend("<i>This is italics </i>");
-            
-                $("div#target")
-                    .before("<h3>Hello this is a title</h3>")
-                    .after("<h3>This is a paragrah</h3>");
+            $("div#parent").empty().html("<h1>hello world</h1>")
         })
         
         
