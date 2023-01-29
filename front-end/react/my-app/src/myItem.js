@@ -37,6 +37,7 @@ class StarWars extends React.Component{
         height:null,
         homeworld:null,
         films:[],
+        loadCharacter: false,
         }
     }
     getNewChar(){
@@ -44,19 +45,27 @@ class StarWars extends React.Component{
             name:"Luke",
             height:172,
             homeworld:'Tatooine',
-            films:['item 1','item 2'],
+            films:['item 1', ' item 2'],
+            loadCharacter:true,
         })
     }
     render(){
       return(
         <div>
+        { 
+            this.state.loadCharacter &&
+            <div>
           <h1>{this.state.name}</h1>
           <p>{this.state.height} cm</p>
           <p>Homeworld: {this.state.homeworld}</p>
           <ul>
-            <li></li>
+            <ol>{this.state.films}</ol>
           </ul>
+            </div>
+        }
           <button type="button" onClick={()=>this.getNewChar()} className="btn">Get a character</button>
+    
+            
         </div>
       )
     }
