@@ -1,3 +1,4 @@
+import { response } from 'express';
 import React from 'react';
 
 // class Item extends React.Component{
@@ -26,7 +27,15 @@ import React from 'react';
 //         )
 //     }
 // }
-
+class filmItemRow extends React.Component{
+    render(){
+        return(
+            <li>
+                <a href="#">Some text</a>
+            </li>
+        )
+    }
+}
 
 class StarWars extends React.Component{
     
@@ -41,15 +50,28 @@ class StarWars extends React.Component{
         }
     }
     getNewChar(){
-        this.setState({
-            name:"Luke",
-            height:172,
-            homeworld:'Tatooine',
-            films:['item 1', ' item 2'],
-            loadCharacter:true,
-        })
+        const randNum=Math.round(Math.random()*82)
+        const url=`https://swapi.dev/api/people/${randNum}/`
+        fetch(url)   
+            .then(response => response.json())
+            .then(data=>{   
+                
+                this.setState({
+                    name:data.name,
+                    height:data.height,
+                    homeworld:data.homeworld,
+                    films:data.films,
+                    loadCharacter:true,
+                })
+            }) 
+               
+            
     }
+
     render(){
+        const movies=this.state.films.map((url,i)=>{
+            return <filmItemRow key={i}/>
+        })
       return(
         <div>
         { 
@@ -57,9 +79,13 @@ class StarWars extends React.Component{
             <div>
           <h1>{this.state.name}</h1>
           <p>{this.state.height} cm</p>
-          <p>Homeworld: {this.state.homeworld}</p>
+          <p><a href={this.state.homeworld}>homeworld</a></p>
           <ul>
-            <ol>{this.state.films}</ol>
+            {
+                this.state.films.map(film=>{
+                    return <li>{films}</li>
+                })
+            }
           </ul>
             </div>
         }
