@@ -1,9 +1,11 @@
 import Hero from "./Hero";
 
-const Search=()=>{
+const Search=({keyword, searchResults})=>{
+    const title=`You are searching for ${keyword}`
+    console.log(searchResults, "are the searching results")
     return(
         <div>
-            <Hero text="searching for......" />
+            <Hero text={title} />
         </div>
     )
 }

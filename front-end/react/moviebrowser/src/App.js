@@ -19,11 +19,9 @@ function App() {
     <div >
     <Navbar />
     <Routes>
-    <Route path="/" element={<Home />} />
-    <Route path="/about" element={<About />} />
-    <Route path='/search'>
-      <Search keyword={searchText} searchResults={searchResults} />
-    </Route>
+      <Route path="/" element={<Home />} />
+      <Route path="/about" element={<About />} />
+      <Route path='/search' element={<Search keyword={searchText} searchResults={searchResults}/>} />     
     </Routes>
     
     </div>
