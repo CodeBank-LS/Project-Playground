@@ -6,7 +6,7 @@ import About from './Components/About';
 import Search from './Components/Search';
 
 import{ Routes, Route} from 'react-router-dom';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 function App() {
 
   const[searchResults, setsearchResults]=useState([]);
@@ -17,7 +17,7 @@ function App() {
 
   return (
     <div >
-    <Navbar />
+    <Navbar /> 
     <Routes>
       <Route path="/" element={<Home />} />
       <Route path="/about" element={<About />} />
