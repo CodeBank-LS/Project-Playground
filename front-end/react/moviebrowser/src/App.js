@@ -10,7 +10,7 @@ import { useState, useEffect } from 'react';
 function App() {
 
   const[searchResults, setsearchResults]=useState([]);
-  const[searchText, setSearchText]=useState('');
+  const[searchText, setSearchText]=useState('123');
  
   
 
