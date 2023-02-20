@@ -4,6 +4,7 @@ import Home from './Components/Home';
 import Navbar from './Components/Navbar';
 import About from './Components/About';
 import Search from './Components/Search';
+import Movies from './Components/Movies';
 
 import{ Routes, Route} from 'react-router-dom';
 import { useState, useEffect } from 'react';
@@ -34,6 +35,7 @@ function App() {
       <Route path="/" element={<Home />} />
       <Route path="/about" element={<About />} />
       <Route path='/search' element={<Search keyword={searchText} searchResults={searchResults}/>} />
+      <Route path="/movies/:id" element={<Movies/>} />
     </Routes>
     
     </div>
