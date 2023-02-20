@@ -1,5 +1,16 @@
 import { Link } from 'react-router-dom';
-const Navbar=()=>{
+import { useNavigate } from 'react-router-dom';
+const Navbar=({ searchText, setSearchText })=>{
+
+    const navigate = useNavigate()
+    
+
+    const updateSearchText= (e) =>{
+        navigate('/search')
+        setSearchText(e.target.value)
+    //    console.log(e.target.value)
+    }
+
     return(
         <nav className="navbar navbar-expand-lg bg-body-tertiary">
         <div className="container-fluid">
@@ -22,9 +33,11 @@ const Navbar=()=>{
             <form className="d-flex" role="search">
                 <input 
                     className="form-control me-2" 
-                    type="search" placeholder="Search" 
+                    type="search" 
+                    placeholder="Search" 
                     aria-label="Search" 
-                    value="test"
+                    value={searchText}
+                    onChange={updateSearchText}
                 />
                 <button className="btn btn-outline-success" type="submit">Search</button>
             </form>
