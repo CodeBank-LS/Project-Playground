@@ -24,4 +24,4 @@ def which_finger(num):
         return r
 
 
-which_finger(1010)
+which_finger(11)

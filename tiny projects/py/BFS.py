@@ -22,7 +22,6 @@ def BFS(graph, s):
     #要在这里做一个映射来存储每个点对应的前一个点，这样可以找到最短路线
     parent={s: None}
 
-
     while(len(queue)>0): #只要queue不空，就那一个node出来
         vertex=queue.pop(0) #取出起始点s
         #s的连接点放进去
@@ -57,8 +56,8 @@ def DFS(graph,s):
 
 
 parent=BFS(graph,"E")
-# for key in parent:
-#     print(key, parent[key])
+for key in parent:
+  print(key, parent[key])
 
 s=v='F' #到达点
 row=[]
