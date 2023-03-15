@@ -1,4 +1,5 @@
 #Dijkstra的本质是BFS+priorityqueue，priority就是距离起点的距离
+import sys
 import heapq
 import math
 graph={
@@ -18,7 +19,7 @@ def init_distance(graph, s):
             distance[vertex]=math.inf
     return distance
 
-def Dijkstra(graph, s):
+def Dijkstra(graph, s,e):
     pqueue=[] #priority queue
     heapq.heappush(pqueue,(0,s)) #起点加入priority queue
     visited=set() #访问过的nodes都放进set python the set is hash
